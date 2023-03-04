@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!--
@@ -28,7 +29,51 @@
                 - Upon submission, triggers errors classes to be attached? (maybe just always be happening)
                 - event.preventDefault() if the form isn't properly filled out
                 - Alert('Submitted!') if the form IS filled out
-    
-    -->
+    --> 
+    <form action="">
+        <fieldset>
+            <div>
+                <label for="email">Email</label>
+                <input id="email"
+                    type="email"
+                    required
+                >
+            </div>
+            
+            <div>
+                <label for="zipcode">Zip Code</label>
+                <input id="zipcode"
+                    type="number"
+                    required
+                >
+            </div>
+            
+            <div>
+                <label for="country">Country</label>
+                <input id="country"
+                    type="text"
+                    required
+                >
+            </div>
+            
+            <div>
+                <label for="password">Password</label>
+                <input id="password"
+                    type="password"
+                    required
+                >
+            </div>
+            
+            <div>
+                <label for="password-confirmation">Confrim Password</label>
+                <input id="password-confirmation"
+                    type="password"
+                    required
+                >
+            </div>
+            
+            <button>Submit</button>
+        </fieldset>
+    </form>
 </body>
 </html>
