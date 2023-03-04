@@ -20,7 +20,8 @@ input[type="email"],
 input[type="number"],
 input[type="password"]
 textarea,
-fieldset {
+fieldset,
+input {
   width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
