@@ -8,6 +8,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!--
+        Planning: 
+            I need a form element.  The form needs to collect Email, Country, Zip Code, Password and Password confirmation.  
+
+            Each field should have errors when not properly filled out:
+                - Email: Required, Needs the right Pattern of (xxx@xxx.com)
+                - Country: Required
+                - Zip Code: Required, Pattern (12345), Minimum 5
+                - Password: Required, Minimum 7 Chars, Max 20 Chars
+                - Password Confirmation: Same as Password, must === password
+
+            For any error:
+                - The field needs a red border CSS class
+                - There needs to be an error message specific to what exactly is missing from the form element
+
+            Form Submit: 
+                - Cannot submit with any errors
+                - Upon submission, triggers errors classes to be attached? (maybe just always be happening)
+                - event.preventDefault() if the form isn't properly filled out
+                - Alert('Submitted!') if the form IS filled out
     
+    -->
 </body>
 </html>
