@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
 form {
     font: 1em sans-serif;
     width: 500px;
