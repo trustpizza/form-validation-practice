@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
         )
 })
 
-email.addEventListener('input', (e) => {
+email.addEventListener('input', () => {
     if (email.validity.typeMismatch) {
         email.setCustomValidity("Email is a required field stupid!")
     } else if (email.validity.patternMismatch) {
@@ -28,3 +28,7 @@ email.addEventListener('input', (e) => {
 
     form.reportValidity()
 }) 
+
+zipcode.addEventListener('input', () => {
+
+})
