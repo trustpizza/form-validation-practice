@@ -30,5 +30,13 @@ email.addEventListener('input', () => {
 }) 
 
 zipcode.addEventListener('input', () => {
-
+    if (zipcode.validity.patternMismatch) {
+        zipcode.setCustomValidity("Zipcode can only use numbers 0-9")
+    } else if (zipcode.validity.tooShort || zipcode.validity.tooLong) {
+        zipcode.setCustomValidity("Zipcode must be exactly 5 numbers")
+    } else {
+        zipcode.setCustomValidity("");
+    }
+    
+    form.reportValidity()
 })
