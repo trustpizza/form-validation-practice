@@ -18,16 +18,16 @@ form.addEventListener('submit', (e) => {
 })
 
 email.addEventListener('input', () => {
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity("Email is a required field stupid!")
-    } else if (email.validity.patternMismatch) {
+    if (email.validity.patternMismatch) {
         email.setCustomValidity("Email needs to be in email@website.com format")
     } else {
         email.setCustomValidity("")
     }
+});
 
+email.addEventListener("focusout", () => {
     form.reportValidity()
-}) 
+})
 
 zipcode.addEventListener('input', () => {
     if (zipcode.validity.patternMismatch) {
@@ -37,6 +37,8 @@ zipcode.addEventListener('input', () => {
     } else {
         zipcode.setCustomValidity("");
     }
-    
-    form.reportValidity()
+});
+
+zipcode.addEventListener('focusout', () => {
+    form.reportValidity();
 })
