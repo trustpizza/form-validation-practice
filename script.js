@@ -48,7 +48,6 @@ password.addEventListener("input", () => {
     } else {
         password.setCustomValidity("");
     }
-    console.log(password.validity)
 })
 
 passwordConfirmation.addEventListener("input", () => {
