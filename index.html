@@ -59,7 +59,7 @@
                     type="text"
                     minlength="3"
                     maxlength="3"
-                    pattern="[A-Za-z]"
+                    pattern="[A-Za-z]*"
                     required
                 >
             </div>
@@ -68,8 +68,7 @@
                 <label for="password">Password</label>
                 <input id="password"
                     type="password"
-                    min="8"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    pattern="[A-Za-z0-9/!@#$%^&*_~]*"
                     required
                 >
             </div>
@@ -78,12 +77,12 @@
                 <label for="password-confirmation">Confrim Password</label>
                 <input id="password-confirmation"
                     type="password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])*"
                     required
                 >
             </div>
             
-            <button>Submit</button>
+            <input type="submit"    > 
         </fieldset>
     </form>
 </body>

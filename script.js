@@ -46,8 +46,15 @@ country.addEventListener('input', () => {
     }
 })
 
+password.addEventListener("input", () => {
+    // if (password.validity.patternMismatch) {
+    //     password.setCustomValidity("Password must contain both uppercase and lowercase letters and 1 symbol")
+    // }
+    console.log(password.validity)
+})
+
 inputs.forEach(input => {
     input.addEventListener("focusout", () => {
-        // form.reportValidity();
+        input.reportValidity()
     })
 })
