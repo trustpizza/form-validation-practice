@@ -4,6 +4,7 @@ const zipcode = document.getElementById('zipcode');
 const country = document.getElementById('country');
 const password = document.getElementById('password');
 const passwordConfirmation = document.getElementById('password-confirmation');
+const inputs = document.querySelectorAll('input')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -25,10 +26,6 @@ email.addEventListener('input', () => {
     }
 });
 
-email.addEventListener("focusout", () => {
-    form.reportValidity()
-})
-
 zipcode.addEventListener('input', () => {
     if (zipcode.validity.patternMismatch) {
         zipcode.setCustomValidity("Zipcode can only use numbers 0-9")
@@ -39,6 +36,18 @@ zipcode.addEventListener('input', () => {
     }
 });
 
-zipcode.addEventListener('focusout', () => {
-    form.reportValidity();
+country.addEventListener('input', () => {
+    if (country.validity.patternMismatch) {
+        country.setCustomValidity("Country can only use letters A-Z")
+    } else if (country.validity.tooShort || country.validity.tooLong) {
+        country.setCustomValidity("Country code must be 3 letters long")
+    } else {
+        country.setCustomValidity("")
+    }
+})
+
+inputs.forEach(input => {
+    input.addEventListener("focusout", () => {
+        // form.reportValidity();
+    })
 })
