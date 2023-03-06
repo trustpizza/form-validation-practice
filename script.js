@@ -9,13 +9,9 @@ const inputs = document.querySelectorAll('input')
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    console.log(
-        email.value,
-        zipcode.value,
-        country.value,
-        password.value,
-        passwordConfirmation.value
-        )
+    if (form.checkValidity()) {
+        alert('High Five!')
+    }
 })
 
 email.addEventListener('input', () => {
@@ -56,8 +52,10 @@ password.addEventListener("input", () => {
 })
 
 passwordConfirmation.addEventListener("input", () => {
-    if (passwordConfirmation !== password) {
+    if (passwordConfirmation.value !== password.value) {
         passwordConfirmation.setCustomValidity("Password and Password Confirmation must be the same")
+    } else {
+        passwordConfirmation.setCustomValidity("")
     }
 })
 
@@ -66,3 +64,4 @@ inputs.forEach(input => {
         input.reportValidity()
     })
 })
+
