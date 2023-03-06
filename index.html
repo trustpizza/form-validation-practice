@@ -68,16 +68,15 @@
                 <label for="password">Password</label>
                 <input id="password"
                     type="password"
-                    pattern="[A-Za-z0-9/!@#$%^&*_~]*"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                     required
                 >
             </div>
             
             <div class="input-section">
-                <label for="password-confirmation">Confrim Password</label>
+                <label for="password-confirmation">Confirm Password</label>
                 <input id="password-confirmation"
                     type="password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])*"
                     required
                 >
             </div>

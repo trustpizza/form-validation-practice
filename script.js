@@ -47,10 +47,18 @@ country.addEventListener('input', () => {
 })
 
 password.addEventListener("input", () => {
-    // if (password.validity.patternMismatch) {
-    //     password.setCustomValidity("Password must contain both uppercase and lowercase letters and 1 symbol")
-    // }
+    if (password.validity.patternMismatch) {
+        password.setCustomValidity("Password must contain 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol and be 8 characters long")
+    } else {
+        password.setCustomValidity("");
+    }
     console.log(password.validity)
+})
+
+passwordConfirmation.addEventListener("input", () => {
+    if (passwordConfirmation !== password) {
+        passwordConfirmation.setCustomValidity("Password and Password Confirmation must be the same")
+    }
 })
 
 inputs.forEach(input => {
